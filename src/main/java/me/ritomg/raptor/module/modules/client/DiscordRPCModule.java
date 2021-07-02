@@ -13,4 +13,8 @@ public class DiscordRPCModule extends Module{
     protected void onEnable() {
         DiscordManager.startRPC();
     }
+
+    protected void onDisable() {
+        DiscordManager.stopRPC();
+    }
 }

@@ -1,11 +1,14 @@
 package me.ritomg.raptor;
 
+import me.ritomg.raptor.filemanager.LoadConfig;
 import me.ritomg.raptor.gui.RaptorClientGui;
 import me.ritomg.raptor.module.ModuleManager;
 import me.ritomg.raptor.setting.SettingsManager;
 import me.zero.alpine.EventBus;
 import me.zero.alpine.EventManager;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.util.Window;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -29,9 +32,12 @@ public class RaptorClient implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        MinecraftClient.getInstance().execute(this::changeTitle);
         logInfo("Starting RaptorClient");
         StartClient();
         logInfo("Started RaptorClient");
+        LoadConfig.init();
+        logInfo("Loaded Configs");
 
     }
 
@@ -42,4 +48,10 @@ public class RaptorClient implements ModInitializer {
         logInfo("ModuleManager Started");
         gui = new RaptorClientGui();
     }
+
+    public void changeTitle(){
+        final Window window = MinecraftClient.getInstance().getWindow();
+        window.setTitle(ModName + ModVersion);
+    }
+
 }

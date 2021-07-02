@@ -309,10 +309,10 @@ public class RaptorClientGui extends MinecraftHUDGUI {
             public IComponent getColorComponent(IColorSetting setting, Supplier<Animation> animation, IComponentAdder adder, ThemeTuple theme, int colorLevel, boolean isContainer) {
                  return new ColorPickerComponent((IColorSetting)setting,new ThemeTuple(theme.theme,theme.logicalLevel,colorLevel));
             }
-            @Override
-            public IComponent getNumberComponent(INumberSetting setting, Supplier<Animation> animation, IComponentAdder adder, ThemeTuple theme, int colorLevel, boolean isContainer) {
-                return new Spinner(setting,theme,isContainer,true,new TextFieldKeys());
-            }
+//            @Override
+//            public IComponent getNumberComponent(INumberSetting setting, Supplier<Animation> animation, IComponentAdder adder, ThemeTuple theme, int colorLevel, boolean isContainer) {
+//                return new Spinner(setting,theme,isContainer,true,new TextFieldKeys());
+//            }
 
 //            @Override
 //            public IComponent getEnumComponent(IEnumSetting setting, Supplier<Animation> animation, IComponentAdder adder, ThemeTuple theme, int colorLevel, boolean isContainer) {
