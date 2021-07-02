@@ -11,11 +11,12 @@ import me.ritomg.raptor.setting.values.IntegerSetting;
 import me.ritomg.raptor.setting.values.ModeSetting;
 import me.ritomg.raptor.util.RCColor;
 import me.ritomg.raptor.module.Module;
+import org.lwjgl.glfw.GLFW;
 
 import java.util.Arrays;
 import java.util.function.Supplier;
 
-@Module.info(name = "ClickGUI", category = Category.Client, drawn = false, Description = "Allows you to change settings in a GUI thanks to PanelStudio", toggleMsg = false)
+@Module.info(name = "ClickGUI", category = Category.Client, bind = GLFW.GLFW_KEY_RIGHT_SHIFT,drawn = false, Description = "Allows you to change settings in a GUI thanks to PanelStudio", toggleMsg = false)
 public class ClickGuiModule extends Module {
 
     public ModeSetting theme = registerMode("Theme", Arrays.asList("RainbowTheme", "ClearGradientTheme", "GamesenseTheme", "ClearTheme", "Windows"), "GamesenseTheme");

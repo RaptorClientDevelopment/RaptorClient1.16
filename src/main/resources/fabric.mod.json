@@ -11,7 +11,6 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "me.ritomg.raptor.gui.GuiKeybinding"
     ],
     "main": [
       "me.ritomg.raptor.RaptorClient"
@@ -23,7 +22,6 @@
   "depends": {
     "fabricloader": ">=0.11.2",
     "fabric": "*",
-    "minecraft": "1.16.5",
-    "fabric-key-binding-api-v1": "*"
+    "minecraft": "1.16.5"
   }
 }
