@@ -8,7 +8,6 @@ import me.ritomg.raptor.module.modules.misc.*;
 import me.ritomg.raptor.module.modules.movement.*;
 import me.ritomg.raptor.module.modules.render.*;
 
-import java.security.Guard;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashMap;
@@ -28,6 +27,8 @@ public class ModuleManager {
         addMod(new TestHud());
         addMod(new TestMisc());
         addMod(new TestMisc());
+        addMod(new TestMovement());
+        addMod(new DiscordRPCModule());
 
     }
     public static void addMod(Module module) {
